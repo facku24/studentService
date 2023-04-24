@@ -1,12 +1,13 @@
 package com.kunix.studentservice.model;
 
-import io.hypersistence.utils.hibernate.type.range.PostgreSQLRangeType;
-import io.hypersistence.utils.hibernate.type.range.Range;
+//import io.hypersistence.utils.hibernate.type.range.PostgreSQLRangeType;
+//import io.hypersistence.utils.hibernate.type.range.Range;
+import com.kunix.studentservice.model.hypersistence.PostgreSQLRangeType;
+import com.kunix.studentservice.model.hypersistence.Range;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 

@@ -1,7 +1,7 @@
 package com.kunix.studentservice.repository;
 
 import com.kunix.studentservice.model.BinDetail;
-import io.hypersistence.utils.hibernate.type.range.Range;
+import com.kunix.studentservice.model.hypersistence.Range;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
