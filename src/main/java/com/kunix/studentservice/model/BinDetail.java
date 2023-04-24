@@ -1,8 +1,6 @@
 package com.kunix.studentservice.model;
 
-//import io.hypersistence.utils.hibernate.type.range.PostgreSQLRangeType;
-//import io.hypersistence.utils.hibernate.type.range.Range;
-import com.kunix.studentservice.model.hypersistence.PostgreSQLRangeType;
+import com.kunix.studentservice.model.hypersistence.PostgresSQLRangeType;
 import com.kunix.studentservice.model.hypersistence.Range;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,16 +17,9 @@ import javax.persistence.*;
 @Data
 @Entity(name = "BinDetail")
 @Table(name = "bin_details")
-@TypeDef(typeClass = PostgreSQLRangeType.class, defaultForType = Range.class)
+@TypeDef(typeClass = PostgresSQLRangeType.class, defaultForType = Range.class)
 public class BinDetail {
-    /*@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-     @JsonSubTypes.Type(PostgreSQLRangeType.class)
-    @Column(name = "bin_range", columnDefinition = "int4range")*/
     @Id
-    //@Type(PostgreSQLRangeType.class)
     @Column(name = "bin_range", columnDefinition = "int4range")
     private Range<Integer> binRange;
 

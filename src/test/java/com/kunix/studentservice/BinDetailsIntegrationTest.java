@@ -17,7 +17,7 @@ import static org.assertj.core.api.BDDAssertions.then;
 @SpringBootTest
 @ContextConfiguration(initializers = {BinDetailsIntegrationTest.Initializer.class})
 public class BinDetailsIntegrationTest {
-    private static final String regex = ".*(\"message\":\\s?\"started\".*|] started\n$)";
+    private static final String regex = ".*(\\\"message\\\":\\\\s?\\\"started\\\".*|] started\\n$)";
     private static PostgreSQLContainer postgreSQLContainer;
 
     static {
@@ -28,7 +28,7 @@ public class BinDetailsIntegrationTest {
 
         postgreSQLContainer.setWaitStrategy((new LogMessageWaitStrategy())
                 .withRegEx(regex)
-                .withStartupTimeout(Duration.ofSeconds(180L)));
+                .withStartupTimeout(Duration.ofSeconds(20L)));
     }
 
 
